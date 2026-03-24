@@ -12,14 +12,17 @@ public class Main {
         }
         String Eprocurado = JOptionPane.showInputDialog("Digite o nome a ser procurado:");
         flag = 0;
-        for (i = 0; i < nelementos; i++) {
+        i = 0;
+        while ((i < nelementos) && (flag != 1)) {
             if (Vetpesquisar[i].equalsIgnoreCase(Eprocurado)) {
-                JOptionPane.showMessageDialog(null, "O valor procurado foi encontrado na posição " + i);
+                JOptionPane.showMessageDialog(null, "O valor encontrado foi encontrado na posição " + i);
                 flag = 1;
             }
+            ++i;
         }
         if (flag == 0) {
-            JOptionPane.showMessageDialog(null, "o nome não foi encontrado");
+            JOptionPane.showMessageDialog(null, "O nome não foi encontrado");
         }
     }
+
 }
